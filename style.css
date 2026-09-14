@@ -39,7 +39,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:400;color:var(--head);text-tra
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100svh;background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
-.hero__video{position:absolute;top:0;right:-5%;width:90%;height:auto;object-fit:contain;pointer-events:none;z-index:0}
+.hero__video{position:absolute;top:0;right:-5%;width:90%;height:auto;object-fit:contain;pointer-events:none;z-index:0;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 48%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 48%,#000 55%,transparent 100%)}
 .hero__scrim{position:absolute;inset:0 auto 0 0;width:62%;z-index:1;pointer-events:none;background:linear-gradient(90deg,#F2F1F0 0%,#F2F1F0 45%,rgba(242,241,240,.8) 72%,rgba(242,241,240,0) 100%)}
 
 .nav{position:relative;z-index:3;display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,5vw,56px);padding:clamp(20px,3vw,38px) clamp(20px,4vw,48px) 0}
@@ -93,7 +93,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:400;color:var(--head);text-tra
 .prices__head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:32px;justify-content:space-between}
 .prices__note{max-width:440px;margin:0;font-size:15px}
 .table-wrap{overflow-x:auto;margin-top:clamp(32px,4vw,56px)}
-.price-table{width:100%;border-collapse:collapse;min-width:420px}
+.price-table{width:100%;border-collapse:collapse}
 .price-table td{padding:16px 12px;border-bottom:1px solid #e2e0de;font-size:clamp(14px,1.5vw,17px);color:var(--head)}
 .price-table td:last-child{text-align:right;font-family:var(--font-head);white-space:nowrap;color:var(--accent-b);font-size:clamp(15px,1.6vw,19px)}
 .price-table tr:hover td{background:#fff}
