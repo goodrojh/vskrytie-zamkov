@@ -9,8 +9,8 @@
   --nav:#3a3a3a;
   --body:#6b6f72;
   --dark:#1a1c1e;
-  --font-head:'Russo One','Quantico','Arial Narrow',sans-serif;
-  --font-body:'Play','Quantico','Arial Narrow',sans-serif;
+  --font-head:'Russo One','Arial Narrow',Impact,sans-serif;
+  --font-body:'Play','Arial Narrow',Arial,sans-serif;
   --pad-x:clamp(20px,9vw,118px);
   --ind:min(238px,28vw);
   --ind2:min(160px,18vw);
@@ -144,20 +144,29 @@ h1,h2,h3{font-family:var(--font-head);font-weight:400;color:var(--head);text-tra
 
 /* ===== MOBILE ===== */
 @media (max-width:700px){
-  .hero__video{right:auto;left:-12%;width:119%}
+  .hero{min-height:0}
+  .hero__video{position:relative;top:auto;right:auto;left:-10%;width:120%;margin:4px 0 -6%;z-index:0}
   .hero__scrim{display:none}
   .nav__links,.nav__call{display:none}
   .burger{display:flex}
-  .hero__title{margin-top:min(360px,68vw);padding:0 20px 28px;font-size:clamp(34px,10vw,56px)}
+  .hero__title{margin-top:0;padding:0 20px 22px;font-size:clamp(30px,9.4vw,52px)}
+  .hero__title .ind{margin-left:min(200px,18vw)}
   .hero__cta{padding:0 20px 36px 20px}
-  .hero__title .ind{margin-left:min(238px,22vw)}
-  .btn--tel{padding:16px 22px;font-size:17px}
-  .about{padding-right:0}
+  .btn{padding:16px 22px}
+  .btn--tel{font-size:clamp(15px,4.4vw,17px)}
+  .h2{font-size:clamp(30px,8.6vw,44px)}
+  .h2 .ind{margin-left:min(120px,11vw)}
+  .about{padding-right:0;gap:28px}
   .about__text,.about__left .btn,.legal__left p,.final__phone,.final__sub{margin-left:0}
-  .h2 .ind{margin-left:min(160px,14vw)}
-  .strip__item{padding:20px 20px}
+  .strip{grid-template-columns:1fr 1fr}
+  .strip__item{padding:18px 16px}
+  .strip__item b{font-size:22px}
+  .strip__item span{font-size:13px}
+  .prices__note{font-size:14px}
+  .price-table td{padding:13px 8px;font-size:14px}
+  .price-table td:last-child{font-size:15px}
+  .final__phone{font-size:clamp(26px,7.6vw,34px)}
   .callbar{display:flex}
   body{padding-bottom:76px}
-  .footer{padding-bottom:24px}
 }
 @media (min-width:701px){.mobile-menu{display:none!important}}
