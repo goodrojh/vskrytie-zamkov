@@ -1,0 +1,4 @@
+.claude/
+_shot.html
+*.png
+!media/*.png
