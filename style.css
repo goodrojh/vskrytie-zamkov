@@ -39,7 +39,8 @@ h1,h2,h3{font-family:var(--font-head);font-weight:400;color:var(--head);text-tra
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100svh;background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
-.hero__video{position:absolute;top:0;right:-5%;width:90%;height:auto;object-fit:contain;pointer-events:none;z-index:0;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 48%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 48%,#000 55%,transparent 100%)}
+.hero__media{position:absolute;top:0;right:-5%;width:90%;z-index:0;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 48%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 48%,#000 55%,transparent 100%)}
+.hero__video{display:block;width:100%;height:auto;object-fit:contain}
 .hero__scrim{position:absolute;inset:0 auto 0 0;width:62%;z-index:1;pointer-events:none;background:linear-gradient(90deg,#F2F1F0 0%,#F2F1F0 45%,rgba(242,241,240,.8) 72%,rgba(242,241,240,0) 100%)}
 
 .nav{position:relative;z-index:3;display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,5vw,56px);padding:clamp(20px,3vw,38px) clamp(20px,4vw,48px) 0}
@@ -145,11 +146,12 @@ h1,h2,h3{font-family:var(--font-head);font-weight:400;color:var(--head);text-tra
 /* ===== MOBILE ===== */
 @media (max-width:700px){
   .hero{min-height:0}
-  .hero__video{position:relative;top:auto;right:auto;left:-10%;width:120%;margin:4px 0 -6%;z-index:0}
+  .hero__media{position:relative;top:auto;right:auto;width:100%;aspect-ratio:6/5;max-height:46vh;margin:0 0 6px;overflow:hidden;-webkit-mask-image:radial-gradient(ellipse 58% 58% at 50% 50%,#000 50%,transparent 100%);mask-image:radial-gradient(ellipse 58% 58% at 50% 50%,#000 50%,transparent 100%)}
+  .hero__video{width:100%;height:100%;object-fit:cover;object-position:66% 50%}
   .hero__scrim{display:none}
   .nav__links,.nav__call{display:none}
   .burger{display:flex}
-  .hero__title{margin-top:0;padding:0 20px 22px;font-size:clamp(30px,9.4vw,52px)}
+  .hero__title{margin-top:0;padding:4px 20px 22px;font-size:clamp(30px,9.4vw,52px)}
   .hero__title .ind{margin-left:min(200px,18vw)}
   .hero__cta{padding:0 20px 36px 20px}
   .btn{padding:16px 22px}
